@@ -27,7 +27,7 @@ const Details = ({id,loadMarkers}) => {
     <MainDiv>
       <DeTiltle variant="h4">{detailInfo.name}</DeTiltle>
       <ImgTxtDiv>
-        <img width="250px" src={detailInfo.img} />
+        <img width="100%" src={detailInfo.img} />
       <DeTxt variant="subtitle1">{detailInfo.link}</DeTxt>
       </ImgTxtDiv>
       <div className="formButtons">

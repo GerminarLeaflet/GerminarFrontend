@@ -13,6 +13,7 @@ background-color: rgb(211,211,211);
 box-shadow: rgba(0, 0, 0, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 color: black;
 margin: 1% auto;
+
  img{
     border-radius: 15px;
  }
@@ -25,19 +26,37 @@ margin-top: 2%;
 display: flex;
 flex-direction: row;
 }
+
+@media (max-width: 430px) {
+font-size: 25px;
+}
+
 `;
 export const DeTiltle = styled(Typography)`
 margin: 0 auto;
+
+@media (max-width: 430px) {
+font-size: 25px;
+}
 `;
 
 
 export const ImgTxtDiv = styled(Stack)`
+width: 250px;
 flex-direction: row;
 margin: 1%;
+@media (max-width: 430px) {
+  
+  width: 100px;
+  height: 100px;
+}
 `;
 
 export const DeTxt = styled(Typography)`
 margin: 2% 2%;
+@media (max-width: 430px) {
+  border: 1px solid red;
+}
 `;
 export const BackBtn = styled(Button)`
 background-color: #2e8b57;
@@ -59,7 +78,10 @@ background-color: #2e8b57;
   color: rgba(225,225,225);
   transition: 2s;
   border-radius: 25px;
-
+  @media (max-width: 430px) {
+  width: fit-content;
+  padding: 5%;
+}
   :hover {
     background-color: #4fbd7f;
   }
