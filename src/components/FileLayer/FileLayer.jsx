@@ -49,7 +49,7 @@ export default function LeafletFileLayer({ loadMarkers }) {
     );}
     setTimeout(() => {
       loadMarkers()
-    }, 20000); 
+    }, 7000); 
   }, []);
 
   return null;
