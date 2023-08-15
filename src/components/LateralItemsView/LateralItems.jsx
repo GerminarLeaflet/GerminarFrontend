@@ -26,7 +26,8 @@ function LateralItems({loadMarkers}) {
   const indexOfFirstMarker = indexOfLastMarker - markersPerPage;
   const locationMarkers = allMarkers.filter((el) => el.tipo !== "hoja");
   const currentMarkers = locationMarkers.slice(0, currentPage * markersPerPage);
-  
+
+  const { pathname } = window.location;
   const [markerPosition, setMarkerPosition] = useState(null);
 
   const dispatch = useDispatch();
@@ -80,11 +81,15 @@ function LateralItems({loadMarkers}) {
       exit={{ width: 0, transition: { duration: 0.8 } }}
     >
       <h2>Puntos de interes</h2>
-      <Box>
+
+    {
+      pathname !== "/" && <Box>
       <LocationButton title="Get my location" onClick={() => myLocation()}><MyLocationIcon/></LocationButton>
       {(markerPosition) && <LocationButton onClick={() => saveLocation()}> <AddLocationIcon /></LocationButton>
 }
 </Box>
+    }
+
       <InfiniteScroll
         dataLength={locationMarkers.length}
         next={() => addPage()}
