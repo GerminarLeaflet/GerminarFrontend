@@ -22,7 +22,7 @@ export default function LeafletFileLayer({ loadMarkers }) {
   const [count, setCount] = useState(0); 
   let input = []
   const map = useMap();
-  const Url = `https://leaflet-api-santiaguero91.vercel.app/markers`
+  const Url = `https://germinar-backend.vercel.app/markers`
 
   useEffect(() => {
     if(count===0){
