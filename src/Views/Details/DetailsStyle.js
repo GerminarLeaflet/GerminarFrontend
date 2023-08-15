@@ -42,21 +42,15 @@ font-size: 25px;
 
 
 export const ImgTxtDiv = styled(Stack)`
-width: 250px;
+width: 100%;
 flex-direction: row;
+justify-content: center;
 margin: 1%;
-@media (max-width: 430px) {
-  
-  width: 100px;
-  height: 100px;
-}
 `;
 
 export const DeTxt = styled(Typography)`
+width: 50%;
 margin: 2% 2%;
-@media (max-width: 430px) {
-  border: 1px solid red;
-}
 `;
 export const BackBtn = styled(Button)`
 background-color: #2e8b57;
@@ -78,10 +72,6 @@ background-color: #2e8b57;
   color: rgba(225,225,225);
   transition: 2s;
   border-radius: 25px;
-  @media (max-width: 430px) {
-  width: fit-content;
-  padding: 5%;
-}
   :hover {
     background-color: #4fbd7f;
   }
